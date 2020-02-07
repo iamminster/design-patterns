@@ -42,8 +42,8 @@
     </properties>
     <modules>
         <module>abstract-factory</module>
-        <module>untitled</module>
         <module>memento</module>
+        <module>observer</module>
     </modules>
 
     <repositories>
@@ -224,14 +224,14 @@
                         <target>11</target>
                     </configuration>
                 </plugin>
-<!--                <plugin>-->
-<!--                    <groupId>org.apache.maven.plugins</groupId>-->
-<!--                    <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                    <version>3.0.0-M3</version>-->
-<!--                    <configuration>-->
-<!--                        <argLine>-Xmx1024M ${argLine}</argLine>-->
-<!--                    </configuration>-->
-<!--                </plugin>-->
+                <!--                <plugin>-->
+                <!--                    <groupId>org.apache.maven.plugins</groupId>-->
+                <!--                    <artifactId>maven-surefire-plugin</artifactId>-->
+                <!--                    <version>3.0.0-M3</version>-->
+                <!--                    <configuration>-->
+                <!--                        <argLine>-Xmx1024M ${argLine}</argLine>-->
+                <!--                    </configuration>-->
+                <!--                </plugin>-->
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -289,57 +289,57 @@
             <!-- Resolves ${projectRoot} to the project root directory. Used by the
                 license-maven-plugin to find the correct location of license-plugin-header-style.xml
                 when built from a submodule directory. -->
-<!--            <plugin>-->
-<!--                <groupId>org.commonjava.maven.plugins</groupId>-->
-<!--                <artifactId>directory-maven-plugin</artifactId>-->
-<!--                <version>0.3.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>directories</id>-->
-<!--                        <goals>-->
-<!--                            <goal>directory-of</goal>-->
-<!--                        </goals>-->
-<!--                        <phase>initialize</phase>-->
-<!--                        <configuration>-->
-<!--                            <property>projectRoot</property>-->
-<!--                            <project>-->
-<!--                                <groupId>io.iamminster.dp</groupId>-->
-<!--                                <artifactId>java-design-patterns</artifactId>-->
-<!--                            </project>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>com.mycila</groupId>-->
-<!--                <artifactId>license-maven-plugin</artifactId>-->
-<!--                <version>3.0</version>-->
-<!--                <configuration>-->
-<!--                    <header>com/mycila/maven/plugin/license/templates/MIT.txt</header>-->
-<!--                    <properties>-->
-<!--                        <owner>Ilkka Seppälä</owner>-->
-<!--                    </properties>-->
-<!--                    <skipExistingHeaders>true</skipExistingHeaders>-->
-<!--                    <headerDefinitions>-->
-<!--                        <headerDefinition>${projectRoot}${file.separator}license-plugin-header-style.xml</headerDefinition>-->
-<!--                    </headerDefinitions>-->
-<!--                    <mapping>-->
-<!--                        <java>SLASHSTAR_CUSTOM_STYLE</java>-->
-<!--                    </mapping>-->
-<!--                    <excludes>-->
-<!--                        <exclude>.github/FUNDING.yml</exclude>-->
-<!--                    </excludes>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>install-format</id>-->
-<!--                        <phase>install</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>format</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.commonjava.maven.plugins</groupId>-->
+            <!--                <artifactId>directory-maven-plugin</artifactId>-->
+            <!--                <version>0.3.1</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>directories</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>directory-of</goal>-->
+            <!--                        </goals>-->
+            <!--                        <phase>initialize</phase>-->
+            <!--                        <configuration>-->
+            <!--                            <property>projectRoot</property>-->
+            <!--                            <project>-->
+            <!--                                <groupId>io.iamminster.dp</groupId>-->
+            <!--                                <artifactId>java-design-patterns</artifactId>-->
+            <!--                            </project>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.mycila</groupId>-->
+            <!--                <artifactId>license-maven-plugin</artifactId>-->
+            <!--                <version>3.0</version>-->
+            <!--                <configuration>-->
+            <!--                    <header>com/mycila/maven/plugin/license/templates/MIT.txt</header>-->
+            <!--                    <properties>-->
+            <!--                        <owner>Ilkka Seppälä</owner>-->
+            <!--                    </properties>-->
+            <!--                    <skipExistingHeaders>true</skipExistingHeaders>-->
+            <!--                    <headerDefinitions>-->
+            <!--                        <headerDefinition>${projectRoot}${file.separator}license-plugin-header-style.xml</headerDefinition>-->
+            <!--                    </headerDefinitions>-->
+            <!--                    <mapping>-->
+            <!--                        <java>SLASHSTAR_CUSTOM_STYLE</java>-->
+            <!--                    </mapping>-->
+            <!--                    <excludes>-->
+            <!--                        <exclude>.github/FUNDING.yml</exclude>-->
+            <!--                    </excludes>-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>install-format</id>-->
+            <!--                        <phase>install</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>format</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
 
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -361,40 +361,40 @@
                 </executions>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>com.iluwatar.urm</groupId>-->
-<!--                <artifactId>urm-maven-plugin</artifactId>-->
-<!--                <version>1.4.8</version>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash; if outputDirectory is not set explicitly it will default to your build dir &ndash;&gt;-->
-<!--                    <outputDirectory>${project.basedir}/etc</outputDirectory>-->
-<!--                    <packages>-->
-<!--                        <param>com.iluwatar</param>-->
-<!--                    </packages>-->
-<!--                    <includeMainDirectory>true</includeMainDirectory>-->
-<!--                    <includeTestDirectory>false</includeTestDirectory>-->
-<!--                    <presenter>plantuml</presenter>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>process-classes</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>map</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.iluwatar.urm</groupId>-->
+            <!--                <artifactId>urm-maven-plugin</artifactId>-->
+            <!--                <version>1.4.8</version>-->
+            <!--                <configuration>-->
+            <!--                    &lt;!&ndash; if outputDirectory is not set explicitly it will default to your build dir &ndash;&gt;-->
+            <!--                    <outputDirectory>${project.basedir}/etc</outputDirectory>-->
+            <!--                    <packages>-->
+            <!--                        <param>com.iluwatar</param>-->
+            <!--                    </packages>-->
+            <!--                    <includeMainDirectory>true</includeMainDirectory>-->
+            <!--                    <includeTestDirectory>false</includeTestDirectory>-->
+            <!--                    <presenter>plantuml</presenter>-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <phase>process-classes</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>map</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
 
         </plugins>
     </build>
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>3.0.0</version>
-            </plugin>
-        </plugins>
-    </reporting>
+<!--    <reporting>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jxr-plugin</artifactId>-->
+<!--                <version>3.0.0</version>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </reporting>-->
 
 </project>
