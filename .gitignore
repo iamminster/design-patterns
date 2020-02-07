@@ -1,0 +1,20 @@
+target
+.metadata
+.settings
+.classpath
+.DS_Store
+.project
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+.idea
+*.iml
+*.swp
+datanucleus.log
+/bin/
+/bin/
+/bin/
+*.log
+event-sourcing/Journal.json
